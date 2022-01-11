@@ -1,5 +1,5 @@
 # argocd-config
-ArgoCD on Pi4 with existing k3s install
+ArgoCD on Pi4 with existing [k3s](https://github.com/alexellis/k3sup) cluster
 
 ## install ArgoCD in k3s
 kubectl create namespace argocd
