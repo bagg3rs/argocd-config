@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-    name: argo-loki-application
+    name: argo-monitoring
     namespace: argocd
 spec:
     project: default
 
     source:
-        repoURL: https://github.com/bagg3rs/argocd-config.git
+        repoURL: https://github.com/bagg3rs/argocd-config.git   # What repo to watch
         targetRevision: HEAD
-        path: apps
+        path: apps    # Path in repo to look for applications
     destination:
-        server: https://kubernetes.default.svc
+        server: https://kubernetes.default.svc    # Since this is inside the cluster we can use the internal dns name
         namespace: monitoring
 
     syncPolicy:
