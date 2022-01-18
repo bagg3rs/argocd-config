@@ -6,7 +6,10 @@ kubectl create namespace argocd
 For Pi there is no ARM image built 
 I have used `rdelprete/argocd-arm64:v2.1.3` and replaced images within https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-Apply `kubectl apply -n argocd -f install.yaml`
+## Apply Application deployment 
+Apply ArgoCD `kubectl apply -n argocd -f install.yaml`
+
+Apply Application e.g. `monitoring-deploy.yaml` `kubectl apply monitoring-deploy.yaml` this will create the namespace
 
 ## access ArgoCD UI from local machine
 - kubectl get svc -n argocd
