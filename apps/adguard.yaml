@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     chart: adguard-home
-    repoURL: https://github.com/AdguardTeam/AdGuardHome
+    repoURL: https://k8s-at-home.com/charts/
     targetRevision: 5.2.0
     helm:
       releaseName: adguard-home
