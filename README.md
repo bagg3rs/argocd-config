@@ -15,6 +15,9 @@ Apply Application e.g. `monitoring-deploy.yaml` `kubectl apply -f monitoring-dep
 - kubectl get svc -n argocd
 - kubectl port-forward svc/argocd-server 8080:443 -n argocd
 
+![image](https://user-images.githubusercontent.com/20583399/150231335-ca9d08c5-855c-4fae-9930-6f3a92fda117.png)
+
+
 ## login with admin user and below token (as in documentation):
 - kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode && echo
 
