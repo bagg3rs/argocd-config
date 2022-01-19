@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kube-prometheus-stack                                          # Name of ArgoCD application CR
+  namespace: argocd                                   # Should be the namespace in which ArgoCD is deployed
+spec:
+  destination:
+    namespace: monitoring
+    server: https://kubernetes.default.svc  
+  project: default
+  source:
+    chart: kube-prometheus-stack
+    repoURL: https://grafana.github.io/helm-charts
+    targetRevision: 4.3.0
+    helm:
+      releaseName: kube-prometheus-stack
+      values: |
+        fullnameOverride: kube-prometheus-stack                       # Giving a fullnameoverride to avoid default names for resources
+        kube-prometheus-stack:
