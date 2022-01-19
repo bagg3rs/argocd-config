@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: adguard-home
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: adguard-home
+  project: default
+  source:
+    chart: adguard-home
+    repoURL: https://github.com/AdguardTeam/AdGuardHome
+    targetRevision: 5.2.0
+    helm:
+      releaseName: adguard-home
+      values: |
+        fullnameOverride: adguard-home                        # Giving a fullnameoverride to avoid default names for resources
+        adguard-home:
