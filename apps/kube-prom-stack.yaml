@@ -21,4 +21,5 @@ spec:
     - CreateNamespace=true
     - PrunePropagationPolicy=foreground
     - PruneLast=true
-    
+    - ApplyOutOfSyncOnly=true
+    - Replace=true
