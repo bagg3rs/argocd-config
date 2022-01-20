@@ -21,8 +21,4 @@ spec:
     - CreateNamespace=true
     - PrunePropagationPolicy=foreground
     - PruneLast=true
-    helm:
-      releaseName: kube-prometheus-stack
-      values: |
-        fullnameOverride: kube-prometheus-stack                       # Giving a fullnameoverride to avoid default names for resources
-        kube-prometheus-stack:
+    
