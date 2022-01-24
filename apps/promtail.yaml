@@ -5,7 +5,7 @@ metadata:
   namespace: argocd                                    # Namespace in which argocd is deployed
 spec:
   destination:
-    namespace: monitoring                              # Namespace in which promtail is deployed
+    namespace: argocd-apps                             # Namespace in which promtail is deployed
     server: https://kubernetes.default.svc
   project: default
   source:

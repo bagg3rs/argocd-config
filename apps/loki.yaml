@@ -5,7 +5,7 @@ metadata:
   namespace: argocd                                   # Should be the namespace in which ArgoCD is deployed
 spec:
   destination:
-    namespace: monitoring                             # Namespace in which Loki will be deployed
+    namespace: argocd-apps                            # Namespace in which Loki will be deployed
     server: https://kubernetes.default.svc            # Cluster in which Loki will be deployed
   project: default
   source:
